@@ -48,6 +48,9 @@
             "phpcs",
             "phpstan analyse",
             "phpunit"
+        ],
+        "coverage": [
+            "phpunit --coverage-html reports/"
         ]
     }
 }
