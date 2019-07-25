@@ -1,0 +1,53 @@
+{
+    "name": "xthiago/php-skeleton",
+    "description": "A skeleton to start new high-quality PHP projects without worrying about bootstrapping everything from scratch.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Thiago Rodrigues",
+            "email": "me@xthiago.com",
+            "homepage": "https://xthiago.com",
+            "role": "Developer"
+        }
+    ],
+
+    "minimum-stability" : "stable",
+
+    "autoload": {
+        "psr-4": {
+            "Xthiago\\": [
+                "src/"
+            ]
+        }
+    },
+
+    "autoload-dev": {
+        "psr-4": {
+            "Xthiago\\": [
+                "tests/"
+            ]
+        }
+    },
+
+    "require-dev": {
+        "phpunit/phpunit": "^8.2.5",
+        "doctrine/coding-standard": "^6.0.0",
+        "jakub-onderka/php-parallel-lint": "^1.0.0",
+        "phpstan/phpstan": "^0.11.12",
+        "phpstan/phpstan-phpunit": "^0.11.2"
+    },
+
+    "require": {
+        "php": ">=7.4"
+    },
+
+    "scripts": {
+        "test": [
+            "parallel-lint . --exclude vendor",
+            "phpcs",
+            "phpstan analyse",
+            "phpunit"
+        ]
+    }
+}

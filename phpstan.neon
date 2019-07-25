@@ -1,0 +1,15 @@
+parameters:
+	level: 7
+	paths:
+	    - src
+	    - tests
+	ignoreErrors:
+		-
+		    # Ignores the following errors in unit tests:
+		    # Parameter #5 $itemsInInventory of class Xthiago\Zombie\Domain\Model\Survivor constructor expects array<Xthiago\Zombie\Domain\Model\InventoryItem>, array<int, string> given.
+            # Parameter #1 $itemsInInventory of method Xthiago\Zombie\Builder\SurvivorBuilder::withItemsInInventory() expects array<Xthiago\Zombie\Domain\Model\InventoryItem>, array<int, string> given.
+			message: '#Parameter \#[0-9]+ \$[a-zA-Z0-9\\_]+ of (method|class) [a-zA-Z0-9\\_:()]+ (constructor ){0,1}expects array<([a-zA-Z0-9\\]+)(, [a-zA-Z0-9\\]+){0,1}>, array<([a-zA-Z0-9\\]+)(, [a-zA-Z0-9\\]+){0,1}> given.#'
+			path: %currentWorkingDirectory%/tests/unit/*
+
+includes:
+    - vendor/phpstan/phpstan-phpunit/extension.neon

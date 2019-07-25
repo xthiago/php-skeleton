@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ruleset name="Xthiago">
+    <description>A custom coding standard based on Doctrine and PSRs</description>
+
+    <arg name="colors" />
+    <arg value="s" />
+
+    <config name="show_progress" value="1"/>
+    <config name="report_width" value="140" />
+
+    <rule ref="Doctrine" />
+
+    <file>./src</file>
+    <file>./tests</file>
+
+    <exclude-pattern>./vendor/*</exclude-pattern>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversableReturnTypeHintSpecification">
+        <exclude-pattern>tests/*</exclude-pattern>
+    </rule>
+
+</ruleset>

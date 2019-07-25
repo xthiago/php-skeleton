@@ -1,0 +1,16 @@
+version: "3.4"
+services:
+  php:
+    build:
+      context: .
+      target: dev
+      args:
+        - XDEBUG_REMOTE_HOST=${XDEBUG_REMOTE_HOST:-localhost}
+    image: xthiago-php-skeleton
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/var/www/app
+    command: php -S 0.0.0.0:8000 -t web/
+    environment:
+      - PHP_IDE_CONFIG=serverName=${XDEBUG_IDE_SERVERNAME:-php}
