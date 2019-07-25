@@ -10,6 +10,6 @@ final class FooTest extends TestCase
 {
     public function testCreateFoo() : void
     {
-        new Foo();
+        $this->assertInstanceOf(Foo::class, new Foo());
     }
 }
