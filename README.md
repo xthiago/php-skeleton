@@ -7,7 +7,7 @@ The skeleton includes a PHP project properly configured with:
 
 - 🛠 **Docker and docker-compose** - because nobody wants (or should) to install project dependencies directly into their 
 machines.
-- 🎉 **PHP 7.4** - typed properties, arrow functions, etc.
+- 🎉 **PHP 7.3**
 - 🕵 **Xdebug** - to stop wasting time printing values and start debugging PHP applications like a boss‍️.
     - currently we provide [install instructions](docs/xdebug.md) for [PHPStorm](https://www.jetbrains.com/phpstorm/) - 
 but it also work with other editors/IDEs.
