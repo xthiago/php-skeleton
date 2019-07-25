@@ -1,4 +1,4 @@
-FROM php:7.4.0alpha2-cli-alpine3.10 AS base
+FROM php:7.3-cli-alpine AS base
 
 MAINTAINER Thiago Rodrigues <me@xthiago.com>
 
@@ -12,7 +12,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 FROM base AS dev
 
 RUN apk add --no-cache --update $PHPIZE_DEPS
-RUN pecl install xdebug-2.8.0alpha1
+RUN pecl install xdebug
 RUN docker-php-ext-enable xdebug
 
 COPY ./docker/php/php.ini /usr/local/etc/php/php.ini
