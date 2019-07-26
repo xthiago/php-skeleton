@@ -12,6 +12,7 @@ machines.
     - currently we provide [install instructions](docs/xdebug.md) for [PHPStorm](https://www.jetbrains.com/phpstorm/) - 
 but it also work with other editors/IDEs.
 - 🚦**PHPUnit** - to write and run unit tests and also generate code coverage.
+- 🏎 **PHP Parallel Lint** - to check syntax of PHP files.
 - 📋 **phpcs** - to ensure good coding standards.
     - currently check against [Doctrine standard](https://github.com/doctrine/coding-standard).
 - 👻 **phpstan** - to find errors in the code before running it. 
