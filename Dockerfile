@@ -23,8 +23,7 @@ RUN sed -i "s|xdebug.remote_host = localhost|xdebug.remote_host = $XDEBUG_REMOTE
 
 FROM base AS ci
 
-COPY ./composer.json /var/www/app/composer.json
-COPY ./composer.lock /var/www/app/composer.lock
+COPY ./composer.* /var/www/app/
 
 RUN composer install \
     --optimize-autoloader \
