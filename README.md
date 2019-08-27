@@ -33,7 +33,7 @@ Stop wasting time! 🏝🍹
 
 1. Make sure you have the requirements described above.
 1. Clone this repository: `git clone git@github.com:xthiago/php-skeleton.git`
-1. Run `docker-compose run php composer install` to install the PHP dependencies.
+1. Run `docker-compose run php compose install` to install the PHP dependencies.
 1. If you are using Linux, go to the next step. If you are using `Docker for Mac or Windows`, create a `.env` file 
 (I suggest you copy from [distribution version](env.dist) with `cp env.dist env.dist`) and add 
 `XDEBUG_REMOTE_HOST=host.docker.internal`). It is needed in order to allow Xdebug to connect back to the IDE in these OS.
@@ -48,7 +48,7 @@ Stop wasting time! 🏝🍹
 In order to start the web application, you must create and start the PHP service:
  
  ```
- docker-composer up -d
+ docker-compose up -d
 ```
 
 Then you can open [https://localhost:8000](https://localhost:8000) in your browser. It will open 
@@ -57,10 +57,10 @@ Then you can open [https://localhost:8000](https://localhost:8000) in your brows
 For troubleshooting, you can watch the logs to see what's going on:
 
 ```
-docker-composer logs -f
+docker-compose logs -f
 ```
 
-See `docker-composer --help` to get more 
+See `docker-compose --help` to get more 
 instructions.
 
 ### Command line
@@ -75,7 +75,9 @@ You can also execute any command in PHP container from outside it typing and run
 
 ```
 docker-compose run php [command-name]
-# Example: docker-compose run php composer --help
+# Example: docker-compose run php 
+
+--help
 ```
 
 #### Available commands
