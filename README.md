@@ -37,7 +37,7 @@ Stop wasting time! 🏝🍹
 1. If you are using Linux, go to the next step. If you are using `Docker for Mac or Windows`, create a `.env` file 
 (I suggest you copy from [distribution version](env.dist) with `cp .env.dist .env`) and add
 `XDEBUG_REMOTE_HOST=host.docker.internal`). It is needed in order to allow Xdebug to connect back to the IDE in these OS.
-1. *(optional)* You can configure the XDebug in your editor/IDE in order to debug this application using it.
+1. *(optional)* You can configure the Xdebug in your editor/IDE in order to debug this application using it.
 [See the guide](docs/xdebug.md).
 1. That's all 😜.
 
