@@ -1,4 +1,4 @@
-FROM php:7.3-cli-alpine AS base
+FROM php:7.4-cli-alpine AS base
 
 MAINTAINER Thiago Rodrigues <me@xthiago.com>
 
