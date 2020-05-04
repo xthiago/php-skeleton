@@ -47,8 +47,8 @@ Stop wasting time! 🏝🍹
 
 In order to start the web application, you must create and start the PHP service:
 
- ```
- docker-compose up -d
+```
+docker-compose up -d
 ```
 
 Then you can open [https://localhost:8000](https://localhost:8000) in your browser. It will open
